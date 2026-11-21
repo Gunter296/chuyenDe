@@ -1,0 +1,18 @@
+<!doctype html><html lang="vi"><meta charset="utf-8">
+<title>Hướng 3: GNN so với RNN đối chứng của Lab</title>
+<style>body{font:16px system-ui;max-width:900px;margin:36px auto;padding:0 20px}td,th{border:1px solid #bbb;padding:8px}table{border-collapse:collapse}th{background:#eef}svg{max-width:100%}</style>
+<h1>Hướng 3: thay RNN bằng GNN trong dự báo tải</h1>
+<p>2067 cohort đã xử lý, bỏ 0;
+146880 giá trị dự báo trên cùng tập test.</p>
+<table><tr><th>Nguồn</th><th>Mô hình</th><th>MAE</th><th>RMSE</th><th>Train tổng (s)</th><th>Suy luận (ms/bước)</th></tr>
+<tr><td>Bài báo, Bảng 1</td><td>RNN</td><td>0,190</td><td>0,250</td><td>Không báo</td><td>Không báo</td></tr>
+<tr><td>Lab, cùng test</td><td>RNN đối chứng Lab</td><td>0.09305</td><td>0.13330</td><td>3603.8</td><td>0.138</td></tr>
+<tr><td>Lab, cùng test</td><td>GNN</td><td>0.05764</td><td>0.08261</td><td>890.3</td><td>0.022</td></tr></table>
+<p>Nguồn hàng bài báo: <a href="../../../Time-SeriesLoadPredictionforCloudResourceAllocationUsingRecurrentNeuralNetworks-1.pdf#page=4">PDF bạn cung cấp, trang 4, Bảng 1, hàng RNN(Ours)</a>. Số được nhập thủ công để tham khảo; Lab không chạy lại mã tác giả.</p>
+<svg viewBox="0 0 730 150" aria-label="MAE cùng test"><text x="10" y="21">MAE trên cùng test</text><text x="10" y="64">RNN</text><rect x="85" y="42" width="540.0" height="25" fill="#64748b"/><text x="640" y="61">0.09305</text><text x="10" y="119">GNN</text><rect x="85" y="97" width="334.5" height="25" fill="#16a34a"/><text x="640" y="116">0.05764</text></svg>
+<p>GNN giảm MAE 38.1% so với RNN đối chứng của Lab trên cùng cohort và bước test.
+Không tính phần trăm thay đổi so với 0,190 vì bài báo thiếu chi tiết mẫu, target,
+horizon và cách tổng hợp chỉ số. CPU/RAM được chia cho 100; 80% đầu phát triển
+mô hình, 20% cuối test; cạnh GNN chọn bằng validation.</p>
+<p>Catalog: gnn\full_run\gnn_full_run\report.json. Đây là phép thử dự báo độc lập;
+không dùng kết quả lập lịch hoặc biên dự phòng.</p></html>

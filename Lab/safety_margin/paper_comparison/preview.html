@@ -1,0 +1,11 @@
+<!doctype html><html lang="vi"><meta charset="utf-8"><title>Biên dự phòng: toàn bộ cohort</title>
+<style>body{font:16px system-ui;max-width:900px;margin:36px auto;padding:0 20px}table{border-collapse:collapse}td,th{border:1px solid #bbb;padding:8px}th{background:#eef}</style>
+<h1>Hướng 2: biên dự phòng theo sai số RNN</h1>
+<p>100 cohort xét, 0 bỏ. q=0.95; chỉ thay đổi là cộng biên vào dự báo RNN trước khi chọn máy.</p>
+<p>Bài gốc công bố RNN MAE 0,190 và RMSE 0,250, nhưng không có số liệu biên, độ bao phủ hay lập lịch. Không thể tính mức cải thiện trực tiếp từ Bảng 1.</p>
+<p>Nguồn 0,190/0,250: <a href="../../../Time-SeriesLoadPredictionforCloudResourceAllocationUsingRecurrentNeuralNetworks-1.pdf#page=4">PDF bạn cung cấp, trang 4, Bảng 1, hàng RNN(Ours)</a>; được nhập thủ công làm tham khảo, không phải kết quả chạy lại mã tác giả.</p>
+<p>RNN đối chứng do Lab tự cài đặt và huấn luyện; không dùng mã, trọng số hoặc tập test gốc của tác giả.</p>
+<table><tr><th>Phương án Lab</th><th>Độ bao phủ</th><th>Quá tải / máy-bước</th><th>Thiếu CPU/RAM</th><th>Giờ máy</th><th>Di chuyển</th></tr>
+<tr><td>RNN</td><td>0.498</td><td>703/2194</td><td>57.0/45073.0</td><td>846.7</td><td>264</td></tr>
+<tr><td>RNN + biên</td><td>0.899</td><td>729/2193</td><td>51.0/47961.0</td><td>847.7</td><td>264</td></tr></table>
+<p>219 lượt cohort–seed đủ hai bước test liên tiếp. Độ bao phủ gộp CPU/RAM trên mọi test; các chỉ số máy là tổng mô phỏng qua cohort và seed, không phải một cụm thật. Biên dùng validation đã chọn epoch nên không có bảo đảm xác suất; không dùng nhãn test để tính biên.</p></html>

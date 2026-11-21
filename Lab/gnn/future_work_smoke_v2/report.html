@@ -1,0 +1,29 @@
+<!doctype html><html lang="vi"><meta charset="utf-8">
+<title>GNN Future Work - báo cáo tổng hợp</title><style>
+body{font:16px system-ui;max-width:1000px;margin:40px auto;line-height:1.5;color:#203044}
+table{border-collapse:collapse;width:100%}td,th{border:1px solid #ccd5df;padding:8px;text-align:right}
+td:first-child,th:first-child{text-align:left}svg{max-width:100%}
+</style><h1>GNN Future Work: dự báo và lập lịch</h1>
+<p><strong>Báo cáo chạy thử cũ:</strong> chỉ 10 cohort đầu của catalog, không phải kết quả bài báo gốc hoặc report toàn bộ dữ liệu. Xem <a href="README.md">nguồn số và cách tính</a>.</p>
+<p>Chưa đủ bằng chứng GNN cải thiện đồng thời dự báo và lập lịch. Kết quả là mô phỏng theo cohort; chưa tái lập bài báo gốc.</p>
+<p>CSV: 31,670,001 dòng; 10 cohort đánh giá;
+0 cohort bị loại trong lượt mới
+(8,979 cohort bị loại khi tạo manifest).
+Chuẩn hóa CPU/RAM bằng chia 100; 80% phát triển, 20% test.</p>
+<h2>Dự báo tổng hợp</h2><svg viewBox="0 0 550 180" role="img" aria-label="Overall MAE comparison"><text x="10" y="40">RNN</text><rect x="90" y="20" width="320.0" height="26" fill="#4e79a7"/><text x="420" y="40">0.06718</text><text x="10" y="90">NoGraph</text><rect x="90" y="70" width="203.3" height="26" fill="#76b7b2"/><text x="420" y="90">0.04269</text><text x="10" y="140">GNN</text><rect x="90" y="120" width="203.6" height="26" fill="#e15759"/><text x="420" y="140">0.04275</text></svg>
+<h2>Tỷ lệ quá tải mô phỏng</h2><svg viewBox="0 0 550 180" role="img" aria-label="Overload comparison"><text x="10" y="40">RNN</text><rect x="90" y="20" width="72.0" height="26" fill="#4e79a7"/><text x="420" y="40">0.225</text><text x="10" y="90">NoGraph</text><rect x="90" y="70" width="68.6" height="26" fill="#76b7b2"/><text x="420" y="90">0.214</text><text x="10" y="140">GNN</text><rect x="90" y="120" width="68.6" height="26" fill="#e15759"/><text x="420" y="140">0.214</text></svg>
+<table><tr><th>Mô hình</th><th>MAE tổng</th><th>RMSE tổng</th><th>Quá tải</th>
+<th>Tổng thiếu</th><th>Giờ máy</th><th>Di chuyển</th><th>Huấn luyện TB (s)</th>
+<th>Suy luận TB (ms/bước)</th><th>Quyết định TB (ms)</th></tr><tr><td>RNN</td><td>0.06718</td><td>0.08640</td><td>0.22500</td><td>1653.00000</td><td>58.66667</td><td>13.00000</td><td>1.27365</td><td>0.19906</td><td>0.05025</td></tr><tr><td>NoGraph</td><td>0.04269</td><td>0.06039</td><td>0.21429</td><td>1653.00000</td><td>62.00000</td><td>18.00000</td><td>0.16677</td><td>0.02923</td><td>0.04271</td></tr><tr><td>GNN</td><td>0.04275</td><td>0.05919</td><td>0.21429</td><td>1693.00000</td><td>62.00000</td><td>18.00000</td><td>0.16627</td><td>0.02774</td><td>0.04193</td></tr></table>
+<h2>Chẩn đoán theo tài nguyên</h2>
+<table><tr><th>Mô hình</th><th>MAE CPU</th><th>MAE RAM</th>
+<th>RMSE CPU</th><th>RMSE RAM</th><th>Thiếu CPU</th><th>Thiếu RAM</th></tr>
+<tr><td>RNN</td><td>0.05879</td><td>0.07557</td><td>0.07860</td><td>0.09354</td><td>0.00000</td><td>1653.00000</td></tr><tr><td>NoGraph</td><td>0.05522</td><td>0.03016</td><td>0.07277</td><td>0.04469</td><td>0.00000</td><td>1653.00000</td></tr><tr><td>GNN</td><td>0.05100</td><td>0.03450</td><td>0.07027</td><td>0.04548</td><td>0.00000</td><td>1693.00000</td></tr></table>
+<p>Điều kiện kết luận đặt trước: GNN giảm cả MAE và RMSE tổng hợp so với RNN
+và NoGraph; đồng thời cải thiện ít nhất một chỉ số lập lịch mà không kém
+đối chứng ở các chỉ số còn lại. Đây là phép sàng lọc mô phỏng, không phải
+kiểm định ý nghĩa thống kê.</p>
+<h2>Giới hạn</h2><p>Chỉ cohort có ít nhất hai bước test liên tiếp mới đo lập lịch.
+CPU/RAM được cộng như đơn vị mô phỏng, không phải dung lượng vật lý Alibaba.
+RNN của Lab không phải bản tái lập chính xác của bài báo gốc. Không kết luận về
+đa nền tảng; các mô hình dùng cùng tập test trong từng cohort.</p></html>

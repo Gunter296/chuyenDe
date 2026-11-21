@@ -1,0 +1,14 @@
+<!doctype html><html lang="vi"><meta charset="utf-8">
+<title>Hướng 1: chọn máy chủ</title><style>body{font:16px system-ui;max-width:940px;margin:36px auto;padding:0 20px}td,th{border:1px solid #bbb;padding:8px}table{border-collapse:collapse}th{background:#eef}</style>
+<h1>Hướng 1: từ dự báo RNN đến chọn máy chủ</h1>
+<p>Bài báo công bố RNN MAE 0,190; RMSE 0,250, nhưng không có số liệu lập lịch.
+RNN đối chứng của Lab trên tập này: MAE 0.12660, RMSE 0.17095. Hai cặp số không
+thể trừ trực tiếp vì giao thức gốc chưa được mô tả đủ.</p>
+<p>Nguồn số công bố: <a href="../../../Time-SeriesLoadPredictionforCloudResourceAllocationUsingRecurrentNeuralNetworks-1.pdf#page=4">PDF bạn cung cấp, trang 4, Bảng 1, hàng RNN(Ours)</a>; được nhập thủ công làm tham khảo, không phải kết quả chạy lại mã tác giả.</p>
+<p>RNN của Lab do chúng tôi tự cài đặt và huấn luyện; không dùng mã, trọng số hoặc tập test gốc của tác giả.</p>
+<table><tr><th>Phương án</th><th>Quá tải / máy-bước</th><th>Thiếu CPU</th><th>Thiếu RAM</th><th>Giờ máy</th><th>Di chuyển</th></tr>
+<tr><td>Giữ vị trí cố định (đối chứng mới)</td><td>8.0/8.0</td><td>0.0</td><td>69.0</td><td>2.7</td><td>0</td></tr>
+<tr><td>RNN + chọn máy</td><td>4.0/12.0</td><td>0.0</td><td>50.0</td><td>4.7</td><td>2.0</td></tr></table>
+<p>Trung bình 3 seed; nguồn Lab\data\container_usage.csv.
+Đây là mô phỏng hai tài nguyên trên tập đã chuẩn bị, không phải kết quả vận hành
+hay mức cải thiện định lượng so với bộ lập lịch của bài báo gốc.</p></html>

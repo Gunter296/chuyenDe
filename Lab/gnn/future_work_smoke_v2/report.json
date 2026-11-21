@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "input_rows_scanned": 31670001,
+    "evaluated_cohorts": 10,
+    "excluded_cohorts": 0,
+    "source_excluded_cohorts": 8979
+  },
+  "summary": {
+    "RNN": {
+      "mae_cpu_ram": [
+        0.05878893183874728,
+        0.07557200288567968
+      ],
+      "rmse_cpu_ram": [
+        0.0786040196811129,
+        0.09354029518446774
+      ],
+      "mae_overall": 0.06718046736221348,
+      "rmse_overall": 0.08639554020094481,
+      "forecast_container_steps": 444,
+      "scheduler_cohort_seed_runs": 12,
+      "overload_rate": 0.225,
+      "cpu_shortfall": 0.0,
+      "ram_shortfall": 1653.0,
+      "active_host_hours": 58.666666666666664,
+      "moves": 13,
+      "training_seconds_mean": 1.2736531466665837,
+      "inference_ms_per_step_mean": 0.19906244447813354,
+      "decision_ms_median_mean": 0.050249999958396074
+    },
+    "NoGraph": {
+      "mae_cpu_ram": [
+        0.05522497770147254,
+        0.03015636478616482
+      ],
+      "rmse_cpu_ram": [
+        0.07277095252404468,
+        0.04469119259614223
+      ],
+      "mae_overall": 0.04269067124381868,
+      "rmse_overall": 0.06038590161172657,
+      "forecast_container_steps": 444,
+      "scheduler_cohort_seed_runs": 12,
+      "overload_rate": 0.21428571428571427,
+      "cpu_shortfall": 0.0,
+      "ram_shortfall": 1653.0,
+      "active_host_hours": 62.0,
+      "moves": 18,
+      "training_seconds_mean": 0.16677165333330776,
+      "inference_ms_per_step_mean": 0.029227555543608712,
+      "decision_ms_median_mean": 0.04271249993810974
+    },
+    "GNN": {
+      "mae_cpu_ram": [
+        0.05100046117944286,
+        0.034503824073062815
+      ],
+      "rmse_cpu_ram": [
+        0.07027026152547593,
+        0.04548262863547651
+      ],
+      "mae_overall": 0.042752142626252834,
+      "rmse_overall": 0.05918859333710952,
+      "forecast_container_steps": 444,
+      "scheduler_cohort_seed_runs": 12,
+      "overload_rate": 0.21428571428571427,
+      "cpu_shortfall": 0.0,
+      "ram_shortfall": 1693.0,
+      "active_host_hours": 62.0,
+      "moves": 18,
+      "training_seconds_mean": 0.16627491666677088,
+      "inference_ms_per_step_mean": 0.027742055494349594,
+      "decision_ms_median_mean": 0.04192916677917916
+    }
+  }
+}

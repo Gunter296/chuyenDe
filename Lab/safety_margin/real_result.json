@@ -1,0 +1,230 @@
+{
+  "quantile_prespecified": 0.95,
+  "per_seed": [
+    {
+      "seed": 11,
+      "source_file": "Lab\\host_selection\\results_real\\comparison_seed_11.json",
+      "B1": {
+        "mode": "B1",
+        "overloaded_host_steps": 4,
+        "observed_host_steps": 12,
+        "overload_rate": 0.3333333333333333,
+        "cpu_shortfall": 0.0,
+        "ram_shortfall": 50.0,
+        "active_host_hours": 4.666666666666667,
+        "moves": 2,
+        "moves_per_100_container_hours": 37.5,
+        "decision_ms_median": 0.02990000029967632,
+        "decision_ms_p95": 0.0638999999864609
+      },
+      "B2": {
+        "mode": "B2",
+        "overloaded_host_steps": 4,
+        "observed_host_steps": 12,
+        "overload_rate": 0.3333333333333333,
+        "cpu_shortfall": 0.0,
+        "ram_shortfall": 50.0,
+        "active_host_hours": 4.666666666666667,
+        "moves": 2,
+        "moves_per_100_container_hours": 37.5,
+        "decision_ms_median": 0.03279999964433955,
+        "decision_ms_p95": 0.04640000042854808
+      },
+      "margin": {
+        "quantile": 0.95,
+        "cpu_ram_by_horizon": [
+          [
+            8.141654270097922,
+            28.109066194813916
+          ]
+        ],
+        "calibration_samples": 16
+      },
+      "empirical_test_coverage_B1": [
+        [
+          0.6875,
+          0.5
+        ]
+      ],
+      "empirical_test_coverage_B2": [
+        [
+          0.875,
+          0.875
+        ]
+      ],
+      "note": "q was prespecified before test. Coverage is empirical, not a guarantee."
+    },
+    {
+      "seed": 22,
+      "source_file": "Lab\\host_selection\\results_real\\comparison_seed_22.json",
+      "B1": {
+        "mode": "B1",
+        "overloaded_host_steps": 4,
+        "observed_host_steps": 12,
+        "overload_rate": 0.3333333333333333,
+        "cpu_shortfall": 0.0,
+        "ram_shortfall": 50.0,
+        "active_host_hours": 4.666666666666667,
+        "moves": 2,
+        "moves_per_100_container_hours": 37.5,
+        "decision_ms_median": 0.029400000130408444,
+        "decision_ms_p95": 0.06599999960599234
+      },
+      "B2": {
+        "mode": "B2",
+        "overloaded_host_steps": 4,
+        "observed_host_steps": 12,
+        "overload_rate": 0.3333333333333333,
+        "cpu_shortfall": 0.0,
+        "ram_shortfall": 50.0,
+        "active_host_hours": 4.666666666666667,
+        "moves": 2,
+        "moves_per_100_container_hours": 37.5,
+        "decision_ms_median": 0.04040000021632295,
+        "decision_ms_p95": 0.17269999989366625
+      },
+      "margin": {
+        "quantile": 0.95,
+        "cpu_ram_by_horizon": [
+          [
+            7.374079099060048,
+            12.693986270702052
+          ]
+        ],
+        "calibration_samples": 16
+      },
+      "empirical_test_coverage_B1": [
+        [
+          0.3125,
+          0.5
+        ]
+      ],
+      "empirical_test_coverage_B2": [
+        [
+          0.875,
+          0.6875
+        ]
+      ],
+      "note": "q was prespecified before test. Coverage is empirical, not a guarantee."
+    },
+    {
+      "seed": 33,
+      "source_file": "Lab\\host_selection\\results_real\\comparison_seed_33.json",
+      "B1": {
+        "mode": "B1",
+        "overloaded_host_steps": 4,
+        "observed_host_steps": 12,
+        "overload_rate": 0.3333333333333333,
+        "cpu_shortfall": 0.0,
+        "ram_shortfall": 50.0,
+        "active_host_hours": 4.666666666666667,
+        "moves": 2,
+        "moves_per_100_container_hours": 37.5,
+        "decision_ms_median": 0.03305000018372084,
+        "decision_ms_p95": 0.049199999921256676
+      },
+      "B2": {
+        "mode": "B2",
+        "overloaded_host_steps": 4,
+        "observed_host_steps": 12,
+        "overload_rate": 0.3333333333333333,
+        "cpu_shortfall": 0.0,
+        "ram_shortfall": 50.0,
+        "active_host_hours": 4.666666666666667,
+        "moves": 2,
+        "moves_per_100_container_hours": 37.5,
+        "decision_ms_median": 0.03155000013066456,
+        "decision_ms_p95": 0.04400000034365803
+      },
+      "margin": {
+        "quantile": 0.95,
+        "cpu_ram_by_horizon": [
+          [
+            8.160445177393314,
+            23.960610330154942
+          ]
+        ],
+        "calibration_samples": 16
+      },
+      "empirical_test_coverage_B1": [
+        [
+          0.6875,
+          0.5
+        ]
+      ],
+      "empirical_test_coverage_B2": [
+        [
+          0.875,
+          0.9375
+        ]
+      ],
+      "note": "q was prespecified before test. Coverage is empirical, not a guarantee."
+    }
+  ],
+  "aggregate": {
+    "B1": {
+      "overload_rate": {
+        "mean": 0.3333333333333333,
+        "std_population": 0.0,
+        "min": 0.3333333333333333,
+        "max": 0.3333333333333333
+      },
+      "cpu_shortfall": {
+        "mean": 0.0,
+        "std_population": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "ram_shortfall": {
+        "mean": 50.0,
+        "std_population": 0.0,
+        "min": 50.0,
+        "max": 50.0
+      },
+      "active_host_hours": {
+        "mean": 4.666666666666667,
+        "std_population": 0.0,
+        "min": 4.666666666666667,
+        "max": 4.666666666666667
+      },
+      "moves_per_100_container_hours": {
+        "mean": 37.5,
+        "std_population": 0.0,
+        "min": 37.5,
+        "max": 37.5
+      }
+    },
+    "B2": {
+      "overload_rate": {
+        "mean": 0.3333333333333333,
+        "std_population": 0.0,
+        "min": 0.3333333333333333,
+        "max": 0.3333333333333333
+      },
+      "cpu_shortfall": {
+        "mean": 0.0,
+        "std_population": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "ram_shortfall": {
+        "mean": 50.0,
+        "std_population": 0.0,
+        "min": 50.0,
+        "max": 50.0
+      },
+      "active_host_hours": {
+        "mean": 4.666666666666667,
+        "std_population": 0.0,
+        "min": 4.666666666666667,
+        "max": 4.666666666666667
+      },
+      "moves_per_100_container_hours": {
+        "mean": 37.5,
+        "std_population": 0.0,
+        "min": 37.5,
+        "max": 37.5
+      }
+    }
+  }
+}

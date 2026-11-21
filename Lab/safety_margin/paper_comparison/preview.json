@@ -1,0 +1,41 @@
+{
+  "direction": "safety_margin",
+  "paper_published": {
+    "mae": 0.19,
+    "rmse": 0.25,
+    "source": "User-provided article PDF, page 4, Table 1, RNN(Ours) row"
+  },
+  "rnn_origin": "Lab implementation trained on its own sample; not author code or weights",
+  "rnn_without_margin": {
+    "covered": 4251,
+    "coverage_n": 8544,
+    "schedule_runs": 219,
+    "overloaded_host_steps": 703,
+    "observed_host_steps": 2194,
+    "cpu_shortfall": 57.0,
+    "ram_shortfall": 45073.0,
+    "active_host_hours": 846.6666666666667,
+    "moves": 264
+  },
+  "rnn_with_margin": {
+    "covered": 7680,
+    "coverage_n": 8544,
+    "schedule_runs": 219,
+    "overloaded_host_steps": 729,
+    "observed_host_steps": 2193,
+    "cpu_shortfall": 51.0,
+    "ram_shortfall": 47961.0,
+    "active_host_hours": 847.6666666666667,
+    "moves": 264
+  },
+  "coverage_without_margin": 0.49754213483146065,
+  "coverage_with_margin": 0.898876404494382,
+  "q": 0.95,
+  "metadata": {
+    "completed": 100,
+    "skipped": 0,
+    "catalog": "gnn\\full_run\\gnn_full_run\\report.json",
+    "q": 0.95
+  },
+  "comparison_status": "Paper has no margin, coverage or scheduling metrics."
+}

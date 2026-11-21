@@ -1,0 +1,31 @@
+{
+  "direction": "gnn",
+  "paper_published": {
+    "mae": 0.19,
+    "rmse": 0.25,
+    "source": "User-provided article PDF, page 4, Table 1, RNN(Ours) row"
+  },
+  "local_rnn": {
+    "mae": 0.09305477310439589,
+    "rmse": 0.13330165373630065,
+    "values": 146880,
+    "training_seconds": 3603.7555413650025,
+    "inference_ms_per_step": 0.13835940990347168
+  },
+  "local_gnn": {
+    "mae": 0.05763678112854516,
+    "rmse": 0.08260925333219983,
+    "values": 146880,
+    "training_seconds": 890.3227522241195,
+    "inference_ms_per_step": 0.022212524758468088
+  },
+  "rnn_origin": "Lab implementation trained on its own sample; not author code or weights",
+  "mae_reduction_vs_local_rnn_percent": 38.06144574240823,
+  "metadata": {
+    "completed": 2067,
+    "skipped": 0,
+    "catalog": "gnn\\full_run\\gnn_full_run\\report.json",
+    "reused_future_work_checkpoint": "gnn\\future_work_report.checkpoint.json"
+  },
+  "comparison_status": "Paired local RNN/GNN comparison; published values are reference only."
+}

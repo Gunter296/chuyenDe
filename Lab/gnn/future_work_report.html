@@ -1,0 +1,53 @@
+<!doctype html><html lang="vi"><meta charset="utf-8"><title>GNN future work report</title>
+<style>body{font:16px system-ui;max-width:1050px;margin:35px auto;padding:0 20px;color:#17202a}
+table{border-collapse:collapse;width:100%}td,th{border:1px solid #ccd;padding:8px}
+th{background:#eef}svg{width:100%;max-width:680px}small{color:#555}</style>
+<h1>GNN: dự báo tổng thể và quyết định lập lịch</h1>
+<p>No complete future-work improvement demonstrated under the strict joint criterion.</p>
+<p>Quét từ SQLite của full_run: 2067 cohort đủ điều kiện trong catalog;
+đánh giá 2067 cohort, bỏ 0;
+6201 lượt cohort–seed; 146880 giá trị dự báo;
+4125 lượt cohort–seed
+đủ hai bước liên tiếp để lập lịch.</p>
+<table><tr><th>Mô hình</th><th>MAE tổng</th><th>RMSE tổng</th><th>MAE CPU</th>
+<th>MAE RAM</th><th>Quá tải</th><th>Giờ máy mô phỏng</th><th>Di chuyển</th>
+<th>Train (s)</th><th>Suy luận (ms/bước)</th></tr><tr><td>RNN</td><td>0.09305</td><td>0.13330</td><td>0.06940</td><td>0.11671</td><td>0.374</td><td>13070.0</td><td>4104</td><td>3603.76</td><td>0.138</td></tr><tr><td>NoGraph</td><td>0.06077</td><td>0.08555</td><td>0.06123</td><td>0.06031</td><td>0.361</td><td>13298.3</td><td>4327</td><td>438.86</td><td>0.022</td></tr><tr><td>FixedGraph</td><td>0.05933</td><td>0.08434</td><td>0.05823</td><td>0.06043</td><td>0.361</td><td>13267.7</td><td>4248</td><td>445.07</td><td>0.022</td></tr><tr><td>GNN</td><td>0.05764</td><td>0.08261</td><td>0.05785</td><td>0.05742</td><td>0.361</td><td>13275.7</td><td>4275</td><td>890.32</td><td>0.022</td></tr></table>
+<svg viewBox="0 0 680 240" role="img" aria-label="Combined forecast MAE (0-1)"><text x="10" y="20" font-size="16">Combined forecast MAE (0-1)</text><text x="10" y="59" font-size="14">RNN</text><rect x="95" y="42" width="430.0" height="24" fill="#64748b"/><text x="540" y="59" font-size="14">0.09305</text><text x="10" y="107" font-size="14">NoGraph</text><rect x="95" y="90" width="280.8" height="24" fill="#2563eb"/><text x="540" y="107" font-size="14">0.06077</text><text x="10" y="155" font-size="14">FixedGraph</text><rect x="95" y="138" width="274.2" height="24" fill="#f59e0b"/><text x="540" y="155" font-size="14">0.05933</text><text x="10" y="203" font-size="14">GNN</text><rect x="95" y="186" width="266.3" height="24" fill="#16a34a"/><text x="540" y="203" font-size="14">0.05764</text></svg><svg viewBox="0 0 680 240" role="img" aria-label="Simulated overload rate"><text x="10" y="20" font-size="16">Simulated overload rate</text><text x="10" y="59" font-size="14">RNN</text><rect x="95" y="42" width="430.0" height="24" fill="#64748b"/><text x="540" y="59" font-size="14">0.37419</text><text x="10" y="107" font-size="14">NoGraph</text><rect x="95" y="90" width="414.6" height="24" fill="#2563eb"/><text x="540" y="107" font-size="14">0.36082</text><text x="10" y="155" font-size="14">FixedGraph</text><rect x="95" y="138" width="415.3" height="24" fill="#f59e0b"/><text x="540" y="155" font-size="14">0.36142</text><text x="10" y="203" font-size="14">GNN</text><rect x="95" y="186" width="414.8" height="24" fill="#16a34a"/><text x="540" y="203" font-size="14">0.36094</text></svg>
+<h2>Giao thức</h2><p>80% đầu theo thời gian để phát triển mô hình, 20% cuối test;
+trong phần phát triển, 75% train và 25% validation. CPU/RAM chia cho 100.
+GNN chọn cạnh tương quan CPU hoặc tương quan CPU+RAM theo validation MSE của từng seed.
+RNN và mạng bỏ cạnh dùng đúng cohort và các thời điểm test tương ứng. Các chỉ số lập lịch
+được mô phỏng trên cùng thuật toán và dung lượng (100,100), không phải tải vật lý Alibaba.</p>
+<p>Giờ máy và số di chuyển là tổng qua các cohort và seed được lặp lại, không phải
+giờ máy hay di chuyển của một cụm sản xuất duy nhất.</p>
+<p>Ngưỡng đánh đổi cho giờ máy/di chuyển chưa được chọn trên validation; verdict dùng điều
+kiện nghiêm ngặt: MAE tổng và quá tải tốt hơn cả ba đối chứng, giờ máy và di chuyển
+không tăng. Thời gian huấn luyện là tổng các lượt chạy; thời gian suy luận là trung
+bình mỗi bước test của cohort. Không được so trực tiếp
+MAE/RMSE với 0,190/0,250 của bài báo gốc vì khác mẫu và cách gộp chỉ số.</p>
+<details><summary>Thông tin chạy và loại cohort</summary><pre>{
+  &quot;cohorts_seen&quot;: 2067,
+  &quot;cohorts_done&quot;: 2067,
+  &quot;cohorts_skipped&quot;: 0,
+  &quot;forecast_values&quot;: 146880,
+  &quot;cohort_seed_runs&quot;: 6201,
+  &quot;scheduling_cohorts&quot;: 4125,
+  &quot;chosen_graph_counts&quot;: {
+    &quot;cpu_graph&quot;: 3339,
+    &quot;cpu_ram_graph&quot;: 2862
+  },
+  &quot;settings&quot;: {
+    &quot;bucket_seconds&quot;: 1200,
+    &quot;window_seconds&quot;: 86400,
+    &quot;cohort_size&quot;: 4,
+    &quot;min_train_coverage&quot;: 0.9,
+    &quot;max_cohorts&quot;: 0,
+    &quot;seeds&quot;: [
+      11,
+      22,
+      33
+    ]
+  },
+  &quot;catalog&quot;: &quot;Lab\\gnn\\full_run\\gnn_full_run\\report.json&quot;
+}</pre></details>
+</html>

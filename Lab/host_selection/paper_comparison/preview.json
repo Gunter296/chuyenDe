@@ -1,0 +1,36 @@
+{
+  "direction": "host_selection",
+  "paper_published": {
+    "mae": 0.19,
+    "rmse": 0.25,
+    "source": "User-provided article PDF, page 4, Table 1, RNN(Ours) row"
+  },
+  "local_rnn": {
+    "mae": 0.08066923205368674,
+    "rmse": 0.11055838793989675,
+    "values": 8544
+  },
+  "rnn_origin": "Lab implementation trained on its own sample; not author code or weights",
+  "static_placement": {
+    "overloaded_host_steps": 1398,
+    "observed_host_steps": 1434,
+    "cpu_shortfall": 288.0,
+    "ram_shortfall": 89709.0,
+    "active_host_hours": 478.0,
+    "moves": 0
+  },
+  "rnn_host_selection": {
+    "overloaded_host_steps": 703,
+    "observed_host_steps": 2194,
+    "cpu_shortfall": 57.0,
+    "ram_shortfall": 45073.0,
+    "active_host_hours": 846.6666666666667,
+    "moves": 264
+  },
+  "metadata": {
+    "completed": 100,
+    "skipped": 0,
+    "catalog": "gnn\\full_run\\gnn_full_run\\report.json"
+  },
+  "comparison_status": "Paper has no scheduling numbers; static placement is a new control."
+}

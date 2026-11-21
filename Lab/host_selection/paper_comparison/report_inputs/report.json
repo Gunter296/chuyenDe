@@ -1,0 +1,280 @@
+{
+  "source": "Lab\\data\\container_usage.csv",
+  "resource_units": "Alibaba container usage percentage, simulation units",
+  "bucket_seconds": 1200,
+  "seeds": [
+    11,
+    22,
+    33
+  ],
+  "per_seed": [
+    {
+      "seed": 11,
+      "metadata": {
+        "train_end": 25,
+        "val_end": 34,
+        "selection_end": 29,
+        "train_windows": 51,
+        "validation_windows": 15,
+        "calibration_windows": 16,
+        "validation_mse_normalized": 0.14361893474937176,
+        "scale": [
+          7.0,
+          100.0
+        ],
+        "test_mae_by_horizon_cpu_ram": [
+          [
+            2.4876234899953786,
+            25.336770885303512
+          ]
+        ],
+        "test_rmse_by_horizon_cpu_ram": [
+          [
+            4.103279812348025,
+            26.27106529983821
+          ]
+        ],
+        "seed": 11,
+        "history": 6,
+        "horizon": 1,
+        "test_steps": 5,
+        "discarded_noncontiguous_test_steps": 0
+      },
+      "B0": {
+        "mode": "B0",
+        "overloaded_host_steps": 4,
+        "observed_host_steps": 12,
+        "overload_rate": 0.3333333333333333,
+        "cpu_shortfall": 0.0,
+        "ram_shortfall": 50.0,
+        "active_host_hours": 4.666666666666667,
+        "moves": 2,
+        "moves_per_100_container_hours": 37.5,
+        "decision_ms_median": 0.0455999997939216,
+        "decision_ms_p95": 0.08230000094044954
+      },
+      "B1": {
+        "mode": "B1",
+        "overloaded_host_steps": 4,
+        "observed_host_steps": 12,
+        "overload_rate": 0.3333333333333333,
+        "cpu_shortfall": 0.0,
+        "ram_shortfall": 50.0,
+        "active_host_hours": 4.666666666666667,
+        "moves": 2,
+        "moves_per_100_container_hours": 37.5,
+        "decision_ms_median": 0.03889999970851932,
+        "decision_ms_p95": 0.04369999805931002
+      }
+    },
+    {
+      "seed": 22,
+      "metadata": {
+        "train_end": 25,
+        "val_end": 34,
+        "selection_end": 29,
+        "train_windows": 51,
+        "validation_windows": 15,
+        "calibration_windows": 16,
+        "validation_mse_normalized": 0.1084907536834431,
+        "scale": [
+          7.0,
+          100.0
+        ],
+        "test_mae_by_horizon_cpu_ram": [
+          [
+            2.321633194826982,
+            18.377230164310408
+          ]
+        ],
+        "test_rmse_by_horizon_cpu_ram": [
+          [
+            3.722845136705672,
+            19.39036841081205
+          ]
+        ],
+        "seed": 22,
+        "history": 6,
+        "horizon": 1,
+        "test_steps": 5,
+        "discarded_noncontiguous_test_steps": 0
+      },
+      "B0": {
+        "mode": "B0",
+        "overloaded_host_steps": 4,
+        "observed_host_steps": 12,
+        "overload_rate": 0.3333333333333333,
+        "cpu_shortfall": 0.0,
+        "ram_shortfall": 50.0,
+        "active_host_hours": 4.666666666666667,
+        "moves": 2,
+        "moves_per_100_container_hours": 37.5,
+        "decision_ms_median": 0.08019999950192869,
+        "decision_ms_p95": 0.11190000077476725
+      },
+      "B1": {
+        "mode": "B1",
+        "overloaded_host_steps": 4,
+        "observed_host_steps": 12,
+        "overload_rate": 0.3333333333333333,
+        "cpu_shortfall": 0.0,
+        "ram_shortfall": 50.0,
+        "active_host_hours": 4.666666666666667,
+        "moves": 2,
+        "moves_per_100_container_hours": 37.5,
+        "decision_ms_median": 0.06475000191130675,
+        "decision_ms_p95": 0.0839000022097025
+      }
+    },
+    {
+      "seed": 33,
+      "metadata": {
+        "train_end": 25,
+        "val_end": 34,
+        "selection_end": 29,
+        "train_windows": 51,
+        "validation_windows": 15,
+        "calibration_windows": 16,
+        "validation_mse_normalized": 0.14277043574167345,
+        "scale": [
+          7.0,
+          100.0
+        ],
+        "test_mae_by_horizon_cpu_ram": [
+          [
+            2.407816171976802,
+            25.027251185743935
+          ]
+        ],
+        "test_rmse_by_horizon_cpu_ram": [
+          [
+            4.0770350555892705,
+            25.29694323428026
+          ]
+        ],
+        "seed": 33,
+        "history": 6,
+        "horizon": 1,
+        "test_steps": 5,
+        "discarded_noncontiguous_test_steps": 0
+      },
+      "B0": {
+        "mode": "B0",
+        "overloaded_host_steps": 4,
+        "observed_host_steps": 12,
+        "overload_rate": 0.3333333333333333,
+        "cpu_shortfall": 0.0,
+        "ram_shortfall": 50.0,
+        "active_host_hours": 4.666666666666667,
+        "moves": 2,
+        "moves_per_100_container_hours": 37.5,
+        "decision_ms_median": 0.03989999822806567,
+        "decision_ms_p95": 0.07240000195452012
+      },
+      "B1": {
+        "mode": "B1",
+        "overloaded_host_steps": 4,
+        "observed_host_steps": 12,
+        "overload_rate": 0.3333333333333333,
+        "cpu_shortfall": 0.0,
+        "ram_shortfall": 50.0,
+        "active_host_hours": 4.666666666666667,
+        "moves": 2,
+        "moves_per_100_container_hours": 37.5,
+        "decision_ms_median": 0.03414999991946388,
+        "decision_ms_p95": 0.039200000173877925
+      }
+    }
+  ],
+  "aggregate": {
+    "B0": {
+      "overload_rate": {
+        "mean": 0.3333333333333333,
+        "std_population": 0.0,
+        "min": 0.3333333333333333,
+        "max": 0.3333333333333333
+      },
+      "cpu_shortfall": {
+        "mean": 0.0,
+        "std_population": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "ram_shortfall": {
+        "mean": 50.0,
+        "std_population": 0.0,
+        "min": 50.0,
+        "max": 50.0
+      },
+      "active_host_hours": {
+        "mean": 4.666666666666667,
+        "std_population": 0.0,
+        "min": 4.666666666666667,
+        "max": 4.666666666666667
+      },
+      "moves_per_100_container_hours": {
+        "mean": 37.5,
+        "std_population": 0.0,
+        "min": 37.5,
+        "max": 37.5
+      },
+      "decision_ms_median": {
+        "mean": 0.05523333250797199,
+        "std_population": 0.01780680300808346,
+        "min": 0.03989999822806567,
+        "max": 0.08019999950192869
+      },
+      "decision_ms_p95": {
+        "mean": 0.0888666678899123,
+        "std_population": 0.016781007375775668,
+        "min": 0.07240000195452012,
+        "max": 0.11190000077476725
+      }
+    },
+    "B1": {
+      "overload_rate": {
+        "mean": 0.3333333333333333,
+        "std_population": 0.0,
+        "min": 0.3333333333333333,
+        "max": 0.3333333333333333
+      },
+      "cpu_shortfall": {
+        "mean": 0.0,
+        "std_population": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "ram_shortfall": {
+        "mean": 50.0,
+        "std_population": 0.0,
+        "min": 50.0,
+        "max": 50.0
+      },
+      "active_host_hours": {
+        "mean": 4.666666666666667,
+        "std_population": 0.0,
+        "min": 4.666666666666667,
+        "max": 4.666666666666667
+      },
+      "moves_per_100_container_hours": {
+        "mean": 37.5,
+        "std_population": 0.0,
+        "min": 37.5,
+        "max": 37.5
+      },
+      "decision_ms_median": {
+        "mean": 0.04593333384642998,
+        "std_population": 0.013445962771945628,
+        "min": 0.03414999991946388,
+        "max": 0.06475000191130675
+      },
+      "decision_ms_p95": {
+        "mean": 0.05560000014763015,
+        "std_population": 0.020095274449103667,
+        "min": 0.039200000173877925,
+        "max": 0.0839000022097025
+      }
+    }
+  },
+  "interpretation": "Simulation results; no SLA, energy or cost claim."
+}

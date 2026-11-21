@@ -1,0 +1,10 @@
+<!doctype html><html lang="vi"><meta charset="utf-8"><title>Chọn máy: toàn bộ cohort</title>
+<style>body{font:16px system-ui;max-width:900px;margin:36px auto;padding:0 20px}table{border-collapse:collapse}td,th{border:1px solid #bbb;padding:8px}th{background:#eef}</style>
+<h1>Hướng 1: RNN dự báo và chọn máy cụ thể</h1>
+<p>100 cohort xét, 0 bỏ; 219 lượt cohort–seed có ít nhất hai bước test liên tiếp.</p>
+<p>Bài gốc công bố RNN MAE 0,190, RMSE 0,250. RNN đối chứng do Lab tự cài đặt: MAE 0.08067, RMSE 0.11056 trên 8544 giá trị test. Không dùng mã, trọng số hoặc tập test gốc của tác giả; không tính chênh lệch trực tiếp với số công bố.</p>
+<p>Nguồn số công bố: <a href="../../../Time-SeriesLoadPredictionforCloudResourceAllocationUsingRecurrentNeuralNetworks-1.pdf#page=4">PDF bạn cung cấp, trang 4, Bảng 1, hàng RNN(Ours)</a>; được nhập thủ công làm tham khảo, không phải kết quả chạy lại mã tác giả.</p>
+<table><tr><th>Phương án Lab</th><th>Quá tải / máy-bước</th><th>Thiếu CPU/RAM</th><th>Giờ máy</th><th>Di chuyển</th></tr>
+<tr><td>Giữ vị trí cố định</td><td>1398/1434</td><td>288.0/89709.0</td><td>478.0</td><td>0</td></tr>
+<tr><td>RNN + chọn máy</td><td>703/2194</td><td>57.0/45073.0</td><td>846.7</td><td>264</td></tr></table>
+<p>Hai máy ban đầu, mỗi máy dung lượng (100,100). Chỉ số là tổng mô phỏng qua cohort và seed, không phải một cụm sản xuất. Bài gốc không có đối chứng lập lịch định lượng; giữ vị trí cố định là đối chứng mới của Lab.</p></html>

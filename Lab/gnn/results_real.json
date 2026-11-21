@@ -1,0 +1,453 @@
+{
+  "source": "Lab\\data\\container_usage.csv",
+  "bucket_seconds": 1200,
+  "containers": [
+    "c_21192",
+    "c_10005",
+    "c_12910",
+    "c_17113"
+  ],
+  "seeds": [
+    11,
+    22,
+    33
+  ],
+  "q_prespecified": 0.95,
+  "settings": {
+    "history": 6,
+    "horizon": 1,
+    "hidden": 16,
+    "epochs": 30
+  },
+  "per_seed": [
+    {
+      "seed": 11,
+      "gnn_forecast": {
+        "model": "GraphNet",
+        "seed": 11,
+        "train_end": 25,
+        "selection_end": 29,
+        "val_end": 34,
+        "edge_count": 2,
+        "training_seconds": 0.015458300000318559,
+        "epochs_ran": 30,
+        "inference_ms_per_step": 0.03350000006321352,
+        "train_windows": 5,
+        "validation_windows": 3,
+        "calibration_samples": 4,
+        "test_steps": 5,
+        "test_mae_by_horizon_cpu_ram": [
+          [
+            2.5271689378533475,
+            22.454186106528955
+          ]
+        ],
+        "test_rmse_by_horizon_cpu_ram": [
+          [
+            4.151205213148517,
+            22.792309457391077
+          ]
+        ]
+      },
+      "no_graph_forecast": {
+        "model": "NoGraph",
+        "seed": 11,
+        "train_end": 25,
+        "selection_end": 29,
+        "val_end": 34,
+        "edge_count": 0,
+        "training_seconds": 0.016053499999998166,
+        "epochs_ran": 30,
+        "inference_ms_per_step": 0.03572000005078735,
+        "train_windows": 5,
+        "validation_windows": 3,
+        "calibration_samples": 4,
+        "test_steps": 5,
+        "test_mae_by_horizon_cpu_ram": [
+          [
+            2.5409194532535593,
+            22.186345532815178
+          ]
+        ],
+        "test_rmse_by_horizon_cpu_ram": [
+          [
+            4.1570398906690205,
+            22.578466812317203
+          ]
+        ]
+      },
+      "B3": {
+        "mode": "B3",
+        "overloaded_host_steps": 4,
+        "observed_host_steps": 12,
+        "overload_rate": 0.3333333333333333,
+        "cpu_shortfall": 0.0,
+        "ram_shortfall": 50.0,
+        "active_host_hours": 4.666666666666667,
+        "moves": 2,
+        "moves_per_100_container_hours": 37.5,
+        "decision_ms_median": 0.04244999990987708,
+        "decision_ms_p95": 0.08179999986168696
+      },
+      "B4": {
+        "mode": "B4",
+        "overloaded_host_steps": 4,
+        "observed_host_steps": 12,
+        "overload_rate": 0.3333333333333333,
+        "cpu_shortfall": 0.0,
+        "ram_shortfall": 50.0,
+        "active_host_hours": 4.666666666666667,
+        "moves": 2,
+        "moves_per_100_container_hours": 37.5,
+        "decision_ms_median": 0.03919999994650425,
+        "decision_ms_p95": 0.05319999991115765
+      },
+      "no_graph_schedule": {
+        "mode": "B1",
+        "overloaded_host_steps": 4,
+        "observed_host_steps": 12,
+        "overload_rate": 0.3333333333333333,
+        "cpu_shortfall": 0.0,
+        "ram_shortfall": 50.0,
+        "active_host_hours": 4.666666666666667,
+        "moves": 2,
+        "moves_per_100_container_hours": 37.5,
+        "decision_ms_median": 0.033500000199637725,
+        "decision_ms_p95": 0.040500000068277586
+      }
+    },
+    {
+      "seed": 22,
+      "gnn_forecast": {
+        "model": "GraphNet",
+        "seed": 22,
+        "train_end": 25,
+        "selection_end": 29,
+        "val_end": 34,
+        "edge_count": 2,
+        "training_seconds": 0.017163299999992887,
+        "epochs_ran": 30,
+        "inference_ms_per_step": 0.06214000004547415,
+        "train_windows": 5,
+        "validation_windows": 3,
+        "calibration_samples": 4,
+        "test_steps": 5,
+        "test_mae_by_horizon_cpu_ram": [
+          [
+            2.602998319691456,
+            14.657328643992845
+          ]
+        ],
+        "test_rmse_by_horizon_cpu_ram": [
+          [
+            4.141457779149495,
+            15.042500809359282
+          ]
+        ]
+      },
+      "no_graph_forecast": {
+        "model": "NoGraph",
+        "seed": 22,
+        "train_end": 25,
+        "selection_end": 29,
+        "val_end": 34,
+        "edge_count": 0,
+        "training_seconds": 0.01746290000028239,
+        "epochs_ran": 30,
+        "inference_ms_per_step": 0.03040000001419685,
+        "train_windows": 5,
+        "validation_windows": 3,
+        "calibration_samples": 4,
+        "test_steps": 5,
+        "test_mae_by_horizon_cpu_ram": [
+          [
+            2.562986876590547,
+            15.053459744656442
+          ]
+        ],
+        "test_rmse_by_horizon_cpu_ram": [
+          [
+            4.144097087028482,
+            15.40901214886154
+          ]
+        ]
+      },
+      "B3": {
+        "mode": "B3",
+        "overloaded_host_steps": 4,
+        "observed_host_steps": 12,
+        "overload_rate": 0.3333333333333333,
+        "cpu_shortfall": 0.0,
+        "ram_shortfall": 50.0,
+        "active_host_hours": 4.666666666666667,
+        "moves": 2,
+        "moves_per_100_container_hours": 37.5,
+        "decision_ms_median": 0.043200000163778896,
+        "decision_ms_p95": 0.0774000000092201
+      },
+      "B4": {
+        "mode": "B4",
+        "overloaded_host_steps": 4,
+        "observed_host_steps": 12,
+        "overload_rate": 0.3333333333333333,
+        "cpu_shortfall": 0.0,
+        "ram_shortfall": 50.0,
+        "active_host_hours": 4.666666666666667,
+        "moves": 2,
+        "moves_per_100_container_hours": 37.5,
+        "decision_ms_median": 0.041949999967982876,
+        "decision_ms_p95": 0.0617999999121821
+      },
+      "no_graph_schedule": {
+        "mode": "B1",
+        "overloaded_host_steps": 4,
+        "observed_host_steps": 12,
+        "overload_rate": 0.3333333333333333,
+        "cpu_shortfall": 0.0,
+        "ram_shortfall": 50.0,
+        "active_host_hours": 4.666666666666667,
+        "moves": 2,
+        "moves_per_100_container_hours": 37.5,
+        "decision_ms_median": 0.03500000002532033,
+        "decision_ms_p95": 0.04149999995206599
+      }
+    },
+    {
+      "seed": 33,
+      "gnn_forecast": {
+        "model": "GraphNet",
+        "seed": 33,
+        "train_end": 25,
+        "selection_end": 29,
+        "val_end": 34,
+        "edge_count": 2,
+        "training_seconds": 0.01634059999969395,
+        "epochs_ran": 30,
+        "inference_ms_per_step": 0.029379999978118576,
+        "train_windows": 5,
+        "validation_windows": 3,
+        "calibration_samples": 4,
+        "test_steps": 5,
+        "test_mae_by_horizon_cpu_ram": [
+          [
+            2.277478573769323,
+            15.464177820137417
+          ]
+        ],
+        "test_rmse_by_horizon_cpu_ram": [
+          [
+            3.6612179456768232,
+            15.766534622642325
+          ]
+        ]
+      },
+      "no_graph_forecast": {
+        "model": "NoGraph",
+        "seed": 33,
+        "train_end": 25,
+        "selection_end": 29,
+        "val_end": 34,
+        "edge_count": 0,
+        "training_seconds": 0.015776799999912328,
+        "epochs_ran": 30,
+        "inference_ms_per_step": 0.030000000060681487,
+        "train_windows": 5,
+        "validation_windows": 3,
+        "calibration_samples": 4,
+        "test_steps": 5,
+        "test_mae_by_horizon_cpu_ram": [
+          [
+            2.2311941987423354,
+            15.597105605401186
+          ]
+        ],
+        "test_rmse_by_horizon_cpu_ram": [
+          [
+            3.6607088958655045,
+            15.905818800466447
+          ]
+        ]
+      },
+      "B3": {
+        "mode": "B3",
+        "overloaded_host_steps": 4,
+        "observed_host_steps": 12,
+        "overload_rate": 0.3333333333333333,
+        "cpu_shortfall": 0.0,
+        "ram_shortfall": 50.0,
+        "active_host_hours": 4.666666666666667,
+        "moves": 2,
+        "moves_per_100_container_hours": 37.5,
+        "decision_ms_median": 0.03680000008898787,
+        "decision_ms_p95": 0.06159999975352548
+      },
+      "B4": {
+        "mode": "B4",
+        "overloaded_host_steps": 4,
+        "observed_host_steps": 12,
+        "overload_rate": 0.3333333333333333,
+        "cpu_shortfall": 0.0,
+        "ram_shortfall": 50.0,
+        "active_host_hours": 4.666666666666667,
+        "moves": 2,
+        "moves_per_100_container_hours": 37.5,
+        "decision_ms_median": 0.04015000013168901,
+        "decision_ms_p95": 0.05729999975301325
+      },
+      "no_graph_schedule": {
+        "mode": "B1",
+        "overloaded_host_steps": 4,
+        "observed_host_steps": 12,
+        "overload_rate": 0.3333333333333333,
+        "cpu_shortfall": 0.0,
+        "ram_shortfall": 50.0,
+        "active_host_hours": 4.666666666666667,
+        "moves": 2,
+        "moves_per_100_container_hours": 37.5,
+        "decision_ms_median": 0.033699999903546995,
+        "decision_ms_p95": 0.041199999941454735
+      }
+    }
+  ],
+  "aggregate": {
+    "gnn_test_mae_by_horizon_cpu_ram": {
+      "mean": [
+        [
+          2.4692152771047087,
+          17.525230856886406
+        ]
+      ],
+      "std_population": [
+        [
+          0.13906772053434666,
+          3.5008285960131804
+        ]
+      ]
+    },
+    "gnn_test_rmse_by_horizon_cpu_ram": {
+      "mean": [
+        [
+          3.984626979324945,
+          17.867114963130895
+        ]
+      ],
+      "std_population": [
+        [
+          0.22871934097098168,
+          3.4951596859478307
+        ]
+      ]
+    },
+    "gnn_training_seconds": {
+      "mean": 0.01632073333333513,
+      "std_population": 0.0006962050766101054
+    },
+    "gnn_inference_ms_per_step": {
+      "mean": 0.04167333336226875,
+      "std_population": 0.014569532914415803
+    },
+    "no_graph_test_mae_by_horizon_cpu_ram": {
+      "mean": [
+        [
+          2.445033509528814,
+          17.612303627624268
+        ]
+      ],
+      "std_population": [
+        [
+          0.1514753685618238,
+          3.241942033031856
+        ]
+      ]
+    },
+    "no_graph_test_rmse_by_horizon_cpu_ram": {
+      "mean": [
+        [
+          3.9872819578543357,
+          17.964432587215065
+        ]
+      ],
+      "std_population": [
+        [
+          0.23098247069722275,
+          3.2689129778444843
+        ]
+      ]
+    },
+    "no_graph_training_seconds": {
+      "mean": 0.01643106666673096,
+      "std_population": 0.00073830921421076
+    },
+    "no_graph_inference_ms_per_step": {
+      "mean": 0.03204000004188856,
+      "std_population": 0.0026072718870912277
+    },
+    "B3": {
+      "overload_rate": {
+        "mean": 0.3333333333333333,
+        "std_population": 0.0
+      },
+      "cpu_shortfall": {
+        "mean": 0.0,
+        "std_population": 0.0
+      },
+      "ram_shortfall": {
+        "mean": 50.0,
+        "std_population": 0.0
+      },
+      "active_host_hours": {
+        "mean": 4.666666666666667,
+        "std_population": 0.0
+      },
+      "moves_per_100_container_hours": {
+        "mean": 37.5,
+        "std_population": 0.0
+      }
+    },
+    "B4": {
+      "overload_rate": {
+        "mean": 0.3333333333333333,
+        "std_population": 0.0
+      },
+      "cpu_shortfall": {
+        "mean": 0.0,
+        "std_population": 0.0
+      },
+      "ram_shortfall": {
+        "mean": 50.0,
+        "std_population": 0.0
+      },
+      "active_host_hours": {
+        "mean": 4.666666666666667,
+        "std_population": 0.0
+      },
+      "moves_per_100_container_hours": {
+        "mean": 37.5,
+        "std_population": 0.0
+      }
+    },
+    "no_graph_schedule": {
+      "overload_rate": {
+        "mean": 0.3333333333333333,
+        "std_population": 0.0
+      },
+      "cpu_shortfall": {
+        "mean": 0.0,
+        "std_population": 0.0
+      },
+      "ram_shortfall": {
+        "mean": 50.0,
+        "std_population": 0.0
+      },
+      "active_host_hours": {
+        "mean": 4.666666666666667,
+        "std_population": 0.0
+      },
+      "moves_per_100_container_hours": {
+        "mean": 37.5,
+        "std_population": 0.0
+      }
+    }
+  },
+  "note": "Simulation metrics and fixed-graph ablation; not original paper replication."
+}

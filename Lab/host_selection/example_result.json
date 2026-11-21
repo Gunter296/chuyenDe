@@ -1,0 +1,28 @@
+[
+  {
+    "mode": "B0",
+    "overloaded_host_steps": 1,
+    "observed_host_steps": 4,
+    "overload_rate": 0.25,
+    "cpu_shortfall": 2.0,
+    "ram_shortfall": 0.0,
+    "active_host_hours": 0.06666666666666667,
+    "moves": 1,
+    "moves_per_100_container_hours": 1000.0,
+    "decision_ms_median": 0.035450000723358244,
+    "decision_ms_p95": 0.038800000766059384
+  },
+  {
+    "mode": "B1",
+    "overloaded_host_steps": 0,
+    "observed_host_steps": 4,
+    "overload_rate": 0.0,
+    "cpu_shortfall": 0.0,
+    "ram_shortfall": 0.0,
+    "active_host_hours": 0.06666666666666667,
+    "moves": 1,
+    "moves_per_100_container_hours": 1000.0,
+    "decision_ms_median": 0.0228000008064555,
+    "decision_ms_p95": 0.03149999974993989
+  }
+]

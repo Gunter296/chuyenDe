@@ -1,0 +1,15 @@
+<!doctype html><html lang="vi"><meta charset="utf-8">
+<title>Hướng 2: biên dự phòng</title><style>body{font:16px system-ui;max-width:940px;margin:36px auto;padding:0 20px}td,th{border:1px solid #bbb;padding:8px}table{border-collapse:collapse}th{background:#eef}</style>
+<h1>Hướng 2: biên dự phòng cho dự báo RNN</h1>
+<p>Bài báo công bố RNN MAE 0,190; RMSE 0,250; không công bố biên dự phòng,
+độ bao phủ hay chỉ số lập lịch. Chỉ thay đổi: cộng phân vị sai số validation
+q=0.95 vào dự báo RNN; cùng test và thuật toán chọn máy.</p>
+<p>Nguồn 0,190/0,250: <a href="../../../Time-SeriesLoadPredictionforCloudResourceAllocationUsingRecurrentNeuralNetworks-1.pdf#page=4">PDF bạn cung cấp, trang 4, Bảng 1, hàng RNN(Ours)</a>; được nhập thủ công làm tham khảo, không phải kết quả chạy lại mã tác giả.</p>
+<p>RNN đối chứng do Lab tự cài đặt và huấn luyện; không dùng mã, trọng số hoặc tập test gốc của tác giả.</p>
+<table><tr><th>Phương án</th><th>Bao phủ CPU/RAM</th><th>Quá tải / máy-bước</th><th>Thiếu CPU/RAM</th><th>Giờ máy</th><th>Di chuyển</th></tr>
+<tr><td>RNN không biên</td><td>0.562/0.500</td><td>4.0/12.0</td><td>0.0/50.0</td><td>4.7</td><td>2.0</td></tr>
+<tr><td>RNN + biên</td><td>0.875/0.833</td><td>4.0/12.0</td><td>0.0/50.0</td><td>4.7</td><td>2.0</td></tr></table>
+<p>Trung bình 3 seed; nguồn Lab\data\container_usage.csv.
+Biên được hiệu chỉnh trên phần validation riêng với chọn epoch; bao phủ là số
+đo thực nghiệm, không phải bảo đảm xác suất. Không thể tính phần trăm cải thiện
+so với bài báo vì bài báo không đo các chỉ số này.</p></html>
