@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="410" viewBox="0 0 920 410">
+<rect width="920" height="410" fill="#fff"/>
+<style>text{font-family:Arial,sans-serif;fill:#1f2937}.title{font-size:20px;font-weight:bold}.sub{font-size:13px}.label{font-size:14px}.val{font-size:13px;font-weight:bold}.axis{stroke:#9ca3af;stroke-width:1}.naive{fill:#64748b}.rnn{fill:#d97706}.gnn{fill:#2563eb}</style>
+<text x="35" y="34" class="title">MAE theo tài nguyên - 1 cua so test, 2 container</text>
+<text x="35" y="56" class="sub">Don vi: ty le su dung goc / 100. Moi cot la trung binh cua 5 horizon.</text>
+<text x="35" y="104" class="label">CPU</text><line x1="130" y1="185" x2="470" y2="185" class="axis"/>
+<rect x="150" y="115" width="70" height="44" class="naive"/><text x="158" y="107" class="val">0,0220</text><text x="153" y="181" class="label">Naive</text>
+<rect x="258" y="105" width="70" height="54" class="rnn"/><text x="266" y="97" class="val">0,0251</text><text x="271" y="181" class="label">RNN</text>
+<rect x="366" y="133" width="70" height="26" class="gnn"/><text x="374" y="125" class="val">0,0130</text><text x="378" y="181" class="label">GNN</text>
+<text x="500" y="104" class="label">RAM</text><line x1="585" y1="350" x2="900" y2="350" class="axis"/>
+<rect x="605" y="337" width="70" height="13" class="naive"/><text x="613" y="329" class="val">0,0130</text><text x="608" y="372" class="label">Naive</text>
+<rect x="710" y="120" width="70" height="230" class="rnn"/><text x="718" y="112" class="val">0,2299</text><text x="723" y="372" class="label">RNN</text>
+<rect x="815" y="170" width="70" height="180" class="gnn"/><text x="823" y="162" class="val">0,1797</text><text x="827" y="372" class="label">GNN</text>
+<text x="35" y="235" class="sub">NoGraph trung RNN; FixedGraph trung GNN den muc so luu trong report.</text>
+<text x="35" y="258" class="sub">Cot CPU va RAM dung thang chieu cao rieng; chi so sanh trong tung nhom.</text>
+<text x="35" y="395" class="sub">Nguon: results/report.json, B1-B4, prediction.mae_by_horizon_cpu_ram; tinh trung binh 5 horizon.</text>
+</svg>

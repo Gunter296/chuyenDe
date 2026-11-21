@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="440" viewBox="0 0 1180 440">
+<rect width="1180" height="440" fill="#f8fafc"/>
+<style>text{font-family:Arial,sans-serif;fill:#172033}.title{font-size:24px;font-weight:bold}.sub{font-size:14px}.head{font-size:14px;font-weight:bold}.name{font-size:17px;font-weight:bold}.num{font-size:16px}.muted{fill:#64748b}.warn{fill:#8a4b09}.line{stroke:#d7e0ea}</style>
+<text x="32" y="42" class="title">Ba phương án trong cùng báo cáo</text>
+<text x="32" y="69" class="sub">Hai phương án mới dùng cùng test; số RNN bài báo gốc là mốc khác giao thức.</text>
+<rect x="28" y="92" width="1124" height="45" fill="#e8eef7" rx="6"/>
+<text x="42" y="120" class="head">PHƯƠNG ÁN</text><text x="370" y="120" class="head">MAE CPU</text><text x="510" y="120" class="head">MAE RAM</text><text x="650" y="120" class="head">RMSE CPU</text><text x="805" y="120" class="head">RMSE RAM</text><text x="975" y="120" class="head">CHỌN MÁY</text>
+<rect x="28" y="146" width="1124" height="70" fill="white" rx="6"/>
+<rect x="28" y="146" width="7" height="70" fill="#d97706"/>
+<text x="42" y="178" class="name">RNN + thuật toán chọn máy</text><text x="370" y="178" class="num">0,06795</text><text x="510" y="178" class="num">0,36812</text><text x="650" y="178" class="num">0,10754</text><text x="805" y="178" class="num">0,47320</text><text x="975" y="178" class="num">99,63% quá tải*</text>
+<text x="42" y="203" class="sub muted">Đối chứng RNN huấn luyện trong dự án, không phải trọng số tác giả</text>
+<rect x="28" y="224" width="1124" height="70" fill="white" rx="6"/>
+<rect x="28" y="224" width="7" height="70" fill="#2563eb"/>
+<text x="42" y="256" class="name">GNN chỉ dự báo</text><text x="370" y="256" class="num">0,08179</text><text x="510" y="256" class="num">0,20828</text><text x="650" y="256" class="num">0,11387</text><text x="805" y="256" class="num">0,26226</text><text x="975" y="256" class="num muted">Không áp dụng</text>
+<text x="42" y="281" class="sub muted">Cùng 138 cohort và cùng test với RNN của dự án</text>
+<rect x="28" y="302" width="1124" height="83" fill="#fff7e9" stroke="#e7bd78" rx="6"/>
+<rect x="28" y="302" width="7" height="83" fill="#8a4b09"/>
+<text x="42" y="333" class="name">RNN bài báo gốc</text><text x="370" y="333" class="num muted">Không tách CPU/RAM</text><text x="650" y="333" class="num muted">Không tách CPU/RAM</text><text x="975" y="333" class="num muted">Không công bố</text>
+<text x="42" y="360" class="sub warn">MAE chung: 0,190  ·  RMSE chung: 0,250  (Bảng 1, RNN(Ours), trang 4)</text>
+<text x="32" y="416" class="sub">* Quá tải là chỉ số mô phỏng, 3.200/3.212 máy–bước. Không tính chênh lệch trực tiếp với số bài báo gốc.</text>
+</svg>

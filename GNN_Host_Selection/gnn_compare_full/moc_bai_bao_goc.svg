@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="360" viewBox="0 0 980 360">
+<rect width="980" height="360" fill="#f8fafc"/>
+<style>text{font-family:Arial,sans-serif;fill:#172033}.title{font-size:24px;font-weight:bold}.sub{font-size:15px}.number{font-size:42px;font-weight:bold;fill:#334155}.label{font-size:17px;font-weight:bold}.box{fill:white;stroke:#cbd5e1;stroke-width:2}</style>
+<text x="35" y="42" class="title">RNN trong bài báo gốc - mốc tham khảo riêng</text>
+<text x="35" y="70" class="sub">Bảng 1, hàng RNN(Ours), trang 4 của bài báo được cung cấp</text>
+<rect x="35" y="100" width="430" height="150" rx="14" class="box"/>
+<text x="66" y="142" class="label">MAE chung được công bố</text><text x="66" y="213" class="number">0,190</text>
+<rect x="515" y="100" width="430" height="150" rx="14" class="box"/>
+<text x="546" y="142" class="label">RMSE chung được công bố</text><text x="546" y="213" class="number">0,250</text>
+<text x="35" y="294" class="sub">Không cùng tập test, horizon, cách chuẩn hóa hay cách tách CPU/RAM với thí nghiệm hiện tại.</text>
+<text x="35" y="320" class="sub">Vì vậy không đặt cùng trục với biểu đồ CPU/RAM và không tính tỷ lệ cải thiện trực tiếp.</text>
+</svg>

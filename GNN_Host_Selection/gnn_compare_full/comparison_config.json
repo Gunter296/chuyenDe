@@ -1,0 +1,30 @@
+{
+  "signature": "545ad52be11e62697f83ff0c269951441f3ea2e5ca40a7ce304e435ccd54d7f4",
+  "source": "../Lab/data/container_usage.csv",
+  "database": "gnn_host_full/usage.sqlite",
+  "config": {
+    "input": "../Lab/data/container_usage.csv",
+    "output": "gnn_compare_full",
+    "containers": 4,
+    "bucket_seconds": 1200,
+    "window_buckets": 72,
+    "history": 12,
+    "horizon": 5,
+    "epochs": 15,
+    "hidden": 24,
+    "seed": 11,
+    "capacity": 1.0,
+    "alpha": 0.15,
+    "beta": 0.1,
+    "boot_steps": 1,
+    "machine_meta": "../Lab/data/machine_meta.csv",
+    "machine_usage": "../Lab/data/machine_usage_bigger.csv",
+    "container_meta": "../Lab/data/container_meta.csv",
+    "synthetic_hosts": false,
+    "all_cohorts": true,
+    "database": "gnn_host_full/usage.sqlite",
+    "min_test_windows": 5,
+    "min_train_coverage": 0.9,
+    "max_cohorts": 0
+  }
+}

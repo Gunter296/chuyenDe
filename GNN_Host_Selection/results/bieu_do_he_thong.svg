@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="360" viewBox="0 0 920 360">
+<rect width="920" height="360" fill="#fff"/>
+<style>text{font-family:Arial,sans-serif;fill:#1f2937}.title{font-size:20px;font-weight:bold}.sub{font-size:13px}.label{font-size:15px}.bar{fill:#dc2626}.zero{fill:#94a3b8}</style>
+<text x="35" y="35" class="title">Chi so he thong - chi 1 buoc test 20 phut</text>
+<text x="35" y="60" class="sub">Ty le qua tai = 2/2 may-buoc dang hoat dong o moi phuong an.</text>
+<text x="35" y="110" class="label">B1 Naive</text><rect x="190" y="89" width="560" height="28" class="bar"/><text x="765" y="110" class="label">100%</text>
+<text x="35" y="160" class="label">B2 RNN</text><rect x="190" y="139" width="560" height="28" class="bar"/><text x="765" y="160" class="label">100%</text>
+<text x="35" y="210" class="label">B3 NoGraph</text><rect x="190" y="189" width="560" height="28" class="bar"/><text x="765" y="210" class="label">100%</text>
+<text x="35" y="260" class="label">B4 GNN</text><rect x="190" y="239" width="560" height="28" class="bar"/><text x="765" y="260" class="label">100%</text>
+<text x="35" y="310" class="sub">Moi phuong an: 0,667 gio may; 0 di chuyen; 0 lenh mo may.</text>
+<text x="35" y="340" class="sub">Nguon: results/report.json, B1-B4.system. Khong suy ra ti le qua tai dai han.</text>
+</svg>

@@ -1,0 +1,10 @@
+# Generated local indexes and journals (can exceed Git hosting file limits).
+**/*.sqlite
+**/*.sqlite-shm
+**/*.sqlite-wal
+
+# Python caches and local environments.
+**/__pycache__/
+**/*.py[cod]
+**/.venv/
+**/.uv-cache/

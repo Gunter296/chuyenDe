@@ -1,0 +1,254 @@
+{
+  "complete": true,
+  "cohorts_evaluated": 138,
+  "containers_seen_in_windows": 33519,
+  "containers_meeting_train_coverage": 25214,
+  "containers_evaluated": 551,
+  "exclusions": {
+    "insufficient_train_coverage_window_instances": 203414,
+    "insufficient_windows": 43523,
+    "cannot_form_cohort": 121
+  },
+  "comparison": {
+    "rnn_host_selection": {
+      "mae_by_horizon_cpu_ram": [
+        [
+          0.06923489142464448,
+          0.40062818019552293
+        ],
+        [
+          0.06407339619136279,
+          0.24163726610067773
+        ],
+        [
+          0.06689423732436349,
+          0.4124938428105037
+        ],
+        [
+          0.07622677484262795,
+          0.290327689892254
+        ],
+        [
+          0.06333970088641604,
+          0.4955145500108581
+        ]
+      ],
+      "rmse_by_horizon_cpu_ram": [
+        [
+          0.11187181571264901,
+          0.5007630340048894
+        ],
+        [
+          0.1044056018151841,
+          0.29576583328317213
+        ],
+        [
+          0.09865785381923738,
+          0.5145102868795981
+        ],
+        [
+          0.12162921502050547,
+          0.3579828637806
+        ],
+        [
+          0.09939654869192147,
+          0.6232757476260984
+        ]
+      ],
+      "cohort_mae_std_by_horizon_cpu_ram": [
+        [
+          0.04211341544438815,
+          0.2599710945801727
+        ],
+        [
+          0.038404961650742024,
+          0.13107649254635134
+        ],
+        [
+          0.04310155481006082,
+          0.2647871675174319
+        ],
+        [
+          0.04638562391373826,
+          0.16054580412080532
+        ],
+        [
+          0.04095108686473739,
+          0.33933846032759113
+        ]
+      ],
+      "test_container_windows": 3212,
+      "system": {
+        "overload_rate": 0.9962640099626401,
+        "machine_hours_total_across_cohorts": 1070.6666666666667,
+        "machine_hours_mean_per_cohort": 7.758454106280192,
+        "machine_hours_std_per_cohort": 1.607033712329537,
+        "migrations_total": 0,
+        "migrations_mean_per_cohort": 0.0,
+        "migrations_std_per_cohort": 0.0,
+        "overload_rate_std_per_cohort": 0.02807331770387963,
+        "active_host_steps": 3212
+      }
+    },
+    "gnn_forecast": {
+      "mae_by_horizon_cpu_ram": [
+        [
+          0.08366224321839429,
+          0.17671786784049434
+        ],
+        [
+          0.09845210873356013,
+          0.14588634884112503
+        ],
+        [
+          0.0763715571157894,
+          0.24616458901618218
+        ],
+        [
+          0.07342402871285252,
+          0.2500080933056744
+        ],
+        [
+          0.0770301624568896,
+          0.22262066344070627
+        ]
+      ],
+      "rmse_by_horizon_cpu_ram": [
+        [
+          0.11407801695154832,
+          0.2127679895858392
+        ],
+        [
+          0.1323802257906698,
+          0.20430489080081538
+        ],
+        [
+          0.1087211723468502,
+          0.299391717093535
+        ],
+        [
+          0.1027109261885024,
+          0.30647072819249505
+        ],
+        [
+          0.10917799267425489,
+          0.27080692144141877
+        ]
+      ],
+      "cohort_mae_std_by_horizon_cpu_ram": [
+        [
+          0.05413771993834203,
+          0.08190936972581231
+        ],
+        [
+          0.06659292818787156,
+          0.07148127415362941
+        ],
+        [
+          0.0487107083999427,
+          0.1271135833911708
+        ],
+        [
+          0.048650273624156554,
+          0.1278133694490229
+        ],
+        [
+          0.05038696469134289,
+          0.11006012568625681
+        ]
+      ],
+      "test_container_windows": 3212
+    }
+  },
+  "paper_rnn_reference": {
+    "mae": 0.19,
+    "rmse": 0.25,
+    "scope": "Table 1, RNN(Ours); not directly comparable to this test set"
+  },
+  "model_cost": {
+    "RNN": {
+      "training_seconds_mean": 0.11442361495658364,
+      "training_seconds_std": 0.10140373522992478,
+      "inference_ms_per_step_mean": 0.41582552691678165,
+      "inference_ms_per_step_std": 0.1106574780267942
+    },
+    "GNN": {
+      "training_seconds_mean": 0.14225502865214157,
+      "training_seconds_std": 0.12178826755723807,
+      "inference_ms_per_step_mean": 0.4859904134303928,
+      "inference_ms_per_step_std": 0.1797583981409843
+    }
+  },
+  "background_missing_fraction": 0.1733940972222222,
+  "host_pool": [
+    "m_1",
+    "m_10",
+    "m_100",
+    "m_1000",
+    "m_1001",
+    "m_1002",
+    "m_1003",
+    "m_1004"
+  ],
+  "capacity_cpu_ram": [
+    [
+      1.0,
+      1.0
+    ],
+    [
+      1.0,
+      1.0
+    ],
+    [
+      1.0,
+      1.0
+    ],
+    [
+      1.0,
+      1.0
+    ],
+    [
+      1.0,
+      1.0
+    ],
+    [
+      1.0,
+      1.0
+    ],
+    [
+      1.0,
+      1.0
+    ],
+    [
+      1.0,
+      1.0
+    ]
+  ],
+  "background_interpretation": "empirical scenario added to container demand; not physical core/GB accounting",
+  "config": {
+    "input": "../Lab/data/container_usage.csv",
+    "output": "gnn_compare_full",
+    "containers": 4,
+    "bucket_seconds": 1200,
+    "window_buckets": 72,
+    "history": 12,
+    "horizon": 5,
+    "epochs": 15,
+    "hidden": 24,
+    "seed": 11,
+    "capacity": 1.0,
+    "alpha": 0.15,
+    "beta": 0.1,
+    "boot_steps": 1,
+    "machine_meta": "../Lab/data/machine_meta.csv",
+    "machine_usage": "../Lab/data/machine_usage_bigger.csv",
+    "container_meta": "../Lab/data/container_meta.csv",
+    "synthetic_hosts": false,
+    "all_cohorts": true,
+    "database": "gnn_host_full/usage.sqlite",
+    "min_test_windows": 5,
+    "min_train_coverage": 0.9,
+    "max_cohorts": 0
+  },
+  "source_valid_rows": 31666484
+}
